@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Shares";
+}
+<div class="background__img">
+    <div class="container container-width-max admin">
+        <div class="container__title admin__title">
+            <h1>Акции</h1>
+
+        </div>
+        <div class="background-color">
+            <button><a class="go-back-admin" href="/Home/Admin">Вернуться в редактор</a></button></br>
+            <br />
+
+            <button><a class="btn-route btn-route-fz18" href="AddShares">Добавить новую Акцию</a></button></br>
+
+        
+
+            <div class="mainTable">
+                <h3>Доступные Аакции</h3>
+                <table>
+                    <tr>
+                        <td>Id</td>
+                        <td>Название Акции</td>
+                        <td>Описание компании</td>
+                        <td>Цена за одну акцию</td>
+                        <td>Минимальный объем лота для покупки</td>
+                        <td>Валюта Акции</td>
+                        <td></td>
+                    </tr>
+                    @foreach (var b in ViewBag.Shares)
+                    {
+
+                <tr>
+                    <td>@b.Id</td>
+                    <td>@b.Name</td>
+                    <td>@b.Description</td>
+                    <td>@b.Cost</td>
+                    <td>@b.Lot</td>
+                    <td>@b.TypeVal</td>
+                    <td>
+                        <button><a href="/Home/ChengeShares/@b.Id">Редактировать</a></button>
+                    </td>
+                    <td>
+                        <button><a href="/Home/DeleteShares/@b.Id">Удалить</a></button>
+                    </td>
+
+                </tr>
+
+                    }
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/ticketScript.js"></script>

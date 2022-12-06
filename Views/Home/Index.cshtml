@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<h1>~~~~~~~~~~~~~~~~~Брокерский Счет~~~~~~~~~~~~~~~~~</h1>
+<div class="mainTable">
+    <h4>Сумма всего портфеля в рублях</h4>
+    <td>@ViewBag.OllRUB</td>
+    <h4>Валюта</h4>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>RUB</td>
+            <td>USD</td>
+            <td>EUR</td>
+            <td></td>
+        </tr>
+        @foreach (var b in ViewBag.Score)
+        {
+    <tr>
+        <td>@b.Id</td>
+        <td>@b.RUB</td>
+        <td>@b.USD</td>
+        <td>@b.EUR</td>
+        <td>
+            <button><a href="/Home/Replenishment/@b.Id">Пополнить</a></button>
+        </td>
+        <td>
+            <button><a href="/Home/Transfer/@b.Id">Перевести</a></button>
+        </td>
+        @*<td><a href="/Home/Replenishment/@b.Id">Пополнить</a></td>
+        <td><a href="/Home/Transfer/@b.Id">Перевести</a></td>*@
+    </tr>
+        }
+    </table>
+</div>
+
+<div class="mainTable">
+    <h4>Мои Акции</h4>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Название</td>
+            <td>Средняя цена за одну</td>
+            <td>Количество Акций</td>
+            <td>Дата покупки</td>
+            <td></td>
+        </tr>
+        @foreach (var b in ViewBag.RegisterShares)
+        {
+    <tr>
+        <td>@b.Id</td>
+        <td>@b.Name</td>
+        <td>@b.Cost</td>
+        <td>@b.QuantityLot</td>
+        <td>@b.Date</td>
+        <td>
+            <button><a href="/Home/IssueSell/@b.Id">Продать</a></button>
+        </td>
+        @*<td><a href="/Home/IssueSell/@b.Id">Продать</a></td>*@
+    </tr>
+        }
+    </table>
+</div>
+
+
+<h1>~~~~~~~~~~~~~~~~~~~Курсы Акций~~~~~~~~~~~~~~~~~~</h1>
+
+<div class="mainTable">
+    <h4>Акции</h4>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Название</td>
+            <td>Цена</td>
+            <td>Валюта</td>
+            <td></td>
+        </tr>
+        @foreach (var b in ViewBag.Shares)
+        {
+            <tr>
+                <td>@b.Id</td>
+                <td>@b.Name</td>
+                <td>@b.Cost</td>
+                <td>@b.TypeVal</td>
+                @*<td><a href="/Home/IssueBuy/@b.Id">Купить</a></td>*@
+            </tr>
+        }
+    </table>
+</div>
+
+@*<h1>------------------------История------------------------</h1>
+
+<div class="mainTable">
+    <h3>История переводов и пополнений</h3>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>RUB</td>
+            <td>USD</td>
+            <td>EUR</td>
+            <td>Карта или номер телефона</td>
+            <td>Тип операции</td>
+            <td>Дата</td>
+            <td></td>
+        </tr>
+        @foreach (var b in ViewBag.TransferAndReplenishment)
+        {
+            <tr>
+                <td>@b.Id</td>
+                <td>@b.RUB</td>
+                <td>@b.USD</td>
+                <td>@b.EUR</td>
+                <td>@b.NumberPhoneCard</td>
+                <td>@b.FlagTR</td>
+                <td>@b.Date</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div class="mainTable">
+    <h3>История покупки и продажи Акций</h3>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Название</td>
+            <td>Цена</td>
+            <td>Количество акций</td>
+            <td>Тип операции</td>
+            <td>Дата</td>
+            <td></td>
+        </tr>
+        @foreach (var b in ViewBag.HistoryShares)
+        {
+            <tr>
+                <td>@b.Id</td>
+                <td>@b.Name</td>
+                <td>@b.Cost</td>
+                <td>@b.QuantityLot</td>
+                <td>@b.BuySell</td>
+                <td>@b.Date</td>
+            </tr>
+        }
+    </table>
+</div>*@
+
+
+
+
+

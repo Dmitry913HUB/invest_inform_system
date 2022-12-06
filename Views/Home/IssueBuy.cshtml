@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "IssueBuy";
+}
+
+    <div>
+        <h3>Форма покупки акций</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.Id" name="Id" />
+            <table>
+                <tr>
+                    <td>Название</td>
+                    <td>@ViewBag.Name</td>
+                </tr>
+                <tr>
+                    <td>Описание</td>
+                    <td>@ViewBag.Description</td>
+                </tr>
+                <tr>
+                    <td>Цена</td>
+                    <td>@ViewBag.Cost</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>Тип валюты</td>
+                    <td>@ViewBag.TypeVal</td>
+                </tr>
+                <tr>
+                    <td>Обем лота</td>
+                    <td>@ViewBag.Lot</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Введие количество лотов для покупки :</p>
+                    </td>
+                    <td>
+                        <input type="number" name="QuantityLot" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Купить" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            </form>
+    </div>
+
+

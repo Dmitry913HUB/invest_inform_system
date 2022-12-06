@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "ChengeScore";
+}
+
+<div>
+    <h3>Форма изменения счетов</h3>
+    <form method="post">
+        <input type="hidden" value="@ViewBag.Id" name="Id" />
+        <table>
+            <tr>
+                <td>
+                    <p>RUB :</p>
+                </td>
+                <td>
+                    <input type="number" name="RUB" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>USD :</p>
+                </td>
+                <td>
+                    <input type="number" name="USD" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>EUR :</p>
+                </td>
+                <td>
+                    <input type="number" name="EUR" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Изменить" />
+                </td>
+                <td></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+
+

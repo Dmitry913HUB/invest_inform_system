@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Transfer";
+}
+
+    <div>
+        <h3>Форма перевода средств</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.Id" name="Id" />
+            <table>
+                <tr>
+                    <td>
+                        <p>Введите номер карты или номер телефона:</p>
+                    </td>
+                    <td>
+                        <input type="number" name="Number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Введите сумму для перевода RUB:</p>
+                    </td>
+                    <td>
+                        <input type="number" name="RUB" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Введите сумму для перевода USD:</p></td>
+                    <td>
+                        <input type="number" name="USD" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Введите сумму для перевода EUR:</p></td>
+                    <td>
+                        <input type="number" name="EUR" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Перевести" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            </form>
+    </div>
+
+

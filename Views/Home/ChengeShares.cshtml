@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "ChengeShares";
+}
+
+<div>
+    <h3>Форма изменения вклада</h3>
+    <form method="post">
+        <input type="hidden" value="@ViewBag.Id" name="Id" />
+        <table>
+            <tr>
+                <td>
+                    <p>Введите название Акции :</p>
+                </td>
+                <td>
+                    <input type="text" name="Name" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Введите описание компании :</p>
+                </td>
+                <td>
+                    <input type="text" name="Description" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Введите цену за одну акцию :</p>
+                </td>
+                <td>
+                    <input type="number" name="Cost" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Введите минимальный объем лота для покупк :</p>
+                </td>
+                <td>
+                    <input type="number" name="Lot" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Введите валюта Акции :</p>
+                </td>
+                <td>
+                    <input type="text" name="TypeVal" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Изменить" />
+                </td>
+                <td></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+
+

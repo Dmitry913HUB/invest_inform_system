@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - is5def</title>
+    @Styles.Render("~/Content/css")
+    <link href="../Content/bootstrap.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <!-- <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" href=""> -->
+
+
+</head>
+
+@*<head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <!-- <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" href=""> -->
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    </head>*@
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Онлайн инвестиции", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Действия", "Actions", "Home")</li>
+                    <li>@Html.ActionLink("История", "History", "Home")</li>
+                    <li>@Html.ActionLink("Личный кабинет", "PersonalArea", "Home")</li>
+                    <li>@Html.ActionLink("Информация", "About", "Home")</li>
+                    @*<li>@Html.ActionLink("Связаться", "Contact", "Home")</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content background-img">
+        <div>@RenderBody()</div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - мое приложение ASP.NET</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

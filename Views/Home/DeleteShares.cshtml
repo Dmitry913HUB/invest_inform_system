@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "DeleteShares";
+}
+
+    <div>
+        <h3>Форма удаления вклада</h3>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.Id" name="Id" />
+            <table>                
+                <tr>
+                    <td>Название Акции</td>
+                    <td>@ViewBag.Name</td>
+                </tr>
+
+                <tr>
+                    <td>Описание компании</td>
+                    <td>@ViewBag.Description</td>
+                </tr>
+
+                <tr>
+                    <td>Цена за одну акцию</td>
+                    <td>@ViewBag.Cost</td>
+                </tr>
+                <tr>
+                    <td>Минимальный объем лота для покупк</td>
+                    <td>@ViewBag.Lot</td>
+                </tr>
+
+                <tr>
+                    <td>Валюта Акции</td>
+                    <td>@ViewBag.TypeVal</td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="submit" value="Удалить" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            </form>
+    </div>
+
+

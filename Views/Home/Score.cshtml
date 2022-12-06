@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Score";
+}
+<div class="background__img">
+    <div class="container container-width-max admin">
+        <div class="container__title admin__title">
+            <h1>Валютные Счета</h1>
+
+        </div>
+        <div class="background-color">
+            </br><button><a class="go-back-admin" href="/Home/Admin">Вернуться в редактор</a></button></br>
+            <br />
+
+            <div class="mainTable">
+                <h3>Валюта</h3>
+                <table>
+                    <tr>
+                        <td>Id</td>
+                        <td>RUB</td>
+                        <td>USD</td>
+                        <td>EUR</td>
+                        <td></td>
+                    </tr>
+                    @foreach (var b in ViewBag.Score)
+                    {
+                        <tr>
+                            <td>@b.Id</td>
+                            <td>@b.RUB</td>
+                            <td>@b.USD</td>
+                            <td>@b.EUR</td>
+                            <td>
+                                <button><a href="/Home/ChengeScore/@b.Id">Редактировать</a></button>
+                            </td>
+
+                        </tr>
+                    }
+                </table>
+            </div>
+
+            @*<ul class="container__items">
+            @foreach (var p in ViewBag.Deposit)
+            {
+
+                <div class="link-container"><a href="/Home/Route/@p.Id">Редактировать</a></div>
+
+                <div class="link-container"><a href="/Home/Delete/@p.Id">Удалить</a></div>
+            }
+
+        </ul>*@
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/ticketScript.js"></script>
